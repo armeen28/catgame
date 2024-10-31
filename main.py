@@ -1,15 +1,13 @@
 cat_attributes = {
-    "intelligence": 0,
-    "energy": 0,
-    "weight": 0,
-    # change the inital values above
+    "intelligence": 2,
+    "energy": 30,
+    "weight": 5,
 }
 
 print("Welcome to my cat game!")
 
-# Take the user inputs for name and colour:
-name = input("Enter name:")
-# ...
+name = input("Enter name of your new cat:")
+colour = input("Enter colour of your new cat: )
 
 # start the while loop
 while True:
@@ -17,16 +15,24 @@ while True:
     option = input("What would you like to do? 1. Play with your cat 2. Train your cat 3. show stats")
 
     if option == '1':
-        # change the cat's attributes here
+        cat_attributes[energy] -= 1 
         pass
     elif option == '2':
+        cat_attributes[intelligence] += 1
         pass
-    # elif ...
+    
+    elif option == '3':
+        print("Your stats: ")
+        for x in cat_attributes:
+            print(f"Your cat's {x} in {cat_attributes[x]}")
+
     else:
+    
         pass
 
     # finish off the if statements below
     if cat_attributes['energy'] < 0:
+        print("Oh no! You just killed your cat")
         pass
     # elif ...
     
